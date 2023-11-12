@@ -2,10 +2,10 @@ import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import {RunDashboard} from "./components/RunDashboard";
-import {Box, createTheme} from "@mui/system";
-import {CssBaseline, IconButton, PaletteMode, ThemeProvider, useMediaQuery, useTheme} from "@mui/material";
+import {Box} from "@mui/system";
+import {CssBaseline} from "@mui/material";
 import {ModeToggle} from "./ModeToggle";
-import {Brightness1, Brightness4, Brightness7} from "@mui/icons-material";
+import {AppHeader} from "./components/AppHeader";
 
 function Default() {
     return <div>
@@ -25,6 +25,7 @@ export const App = () => {
     return (
         <ModeToggle>
             <Box sx={mainStyle}>
+                <AppHeader/>
                 <CssBaseline/>
                 <Router>
                     <Routes>

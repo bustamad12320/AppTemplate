@@ -30,8 +30,6 @@ export const ModeToggle = ({children}: ModeToggleProps): React.ReactNode => {
         [mode],
     );
 
-
-
     return (
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
