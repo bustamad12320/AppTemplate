@@ -9,7 +9,9 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import {Grid, Paper} from "@mui/material";
+import {Grid, Paper, useTheme} from "@mui/material";
+import {Brightness4, Brightness7} from "@mui/icons-material";
+import {ColorModeContext} from "../App";
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -23,6 +25,11 @@ const appNameStyle = {
     textDecoration: 'none'
 }
 
+const companyInfoContainerStyle = {
+    display: 'flex',
+    alignItems: 'center'
+}
+
 const avatarContainerStyle = {
     display: 'flex',
     justifyContent: 'end'
@@ -31,6 +38,8 @@ const avatarContainerStyle = {
 export const AppHeader = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const [open, setOpen] = React.useState<boolean>(anchorEl ? true : false);
+    const colorMode = React.useContext(ColorModeContext);
+    const theme = useTheme();
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
         setOpen(!open);
@@ -45,11 +54,14 @@ export const AppHeader = () => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Grid container gap={0}>
-                        <Grid xs={9}>
+                        <Grid item xs={9} sx={companyInfoContainerStyle}>
                             <AdbIcon sx={{mr: 1}}/>
                             <Typography sx={appNameStyle}> LOGO </Typography>
+                            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+                                {theme.palette.mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
+                            </IconButton>
                         </Grid>
-                        <Grid xs={3}>
+                        <Grid item xs={3}>
                             <Box sx={avatarContainerStyle}>
                                 <IconButton onClick={handleClick}>
                                     <Avatar/>

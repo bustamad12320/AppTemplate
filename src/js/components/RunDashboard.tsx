@@ -31,7 +31,7 @@ export const RunDashboard = () => {
                     <Paper sx={dataCardStyle}> xs=4 </Paper>
                 </Grid>
             </Grid>
-            <Grid xs={12} marginY={2}>
+            <Grid item xs={12} marginY={2}>
                 <Paper sx={dataCardStyle}> xs=8 </Paper>
             </Grid>
         </Box>
