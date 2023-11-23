@@ -12,6 +12,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import {Grid, Paper, useTheme} from "@mui/material";
 import {Brightness4, Brightness7} from "@mui/icons-material";
 import {ColorModeContext} from "../App";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -49,12 +50,19 @@ export const AppHeader = () => {
         setOpen(false);
     };
 
+    const handleDrawerOpen = () => {
+        console.log("opening drawer");
+    }
+
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Grid container gap={0}>
                         <Grid item xs={9} sx={companyInfoContainerStyle}>
+                            <IconButton color="inherit" sx={{padding: theme.spacing(1), marginX: theme.spacing(2)}} onClick={handleDrawerOpen}>
+                                <MenuIcon />
+                            </IconButton>
                             <AdbIcon sx={{mr: 1}}/>
                             <Typography sx={appNameStyle}> LOGO </Typography>
                             <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">

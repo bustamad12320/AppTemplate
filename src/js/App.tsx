@@ -6,6 +6,7 @@ import {Box} from "@mui/system";
 import {CssBaseline} from "@mui/material";
 import {ModeToggle} from "./ModeToggle";
 import {AppHeader} from "./components/AppHeader";
+import {Testing} from "./components/Testing";
 
 function Default() {
     return <div>
@@ -14,9 +15,6 @@ function Default() {
 }
 
 const mainStyle = {
-    padding: '0px, 24px',
-    maxWidth: '85rem',
-    margin: 'auto'
 }
 
 export const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -30,7 +28,8 @@ export const App = () => {
                 <Router>
                     <Routes>
                         <Route path={"/dashboard"} element={<RunDashboard/>}/>
-                        <Route path={"*"} element={<Default/>}/>
+                        <Route path={"/theory"} element={<div> Theory </div>}/>
+                        <Route path={"*"} element={<Testing/>}/>
                     </Routes>
                 </Router>
             </Box>
