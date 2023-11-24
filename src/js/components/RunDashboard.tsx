@@ -1,35 +1,36 @@
 import React from 'react';
 import {Grid, Paper} from "@mui/material";
 import {Box, createTheme} from "@mui/system";
-
-const theme = createTheme();
-
-const containerStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    '@media (min-width: 768px)': {
-        gridTemplateColumns: '1fr 1fr 1fr',
-    },
-    paddingY: theme.spacing(2)
-}
+import { MenuDrawerContext } from '../DrawerContext';
 
 const dataCardStyle = {
     padding: '20px',
     height: '300px'
 }
 
+const runDashboardStyle = {
+    display: 'grid',
+    paddingLeft: 12,
+    paddingRight: 4
+}
 
 export const RunDashboard = () => {
+    const {isDrawerOpen} = React.useContext(MenuDrawerContext);
+
     return (
-        <Box>
+        <Box sx={{
+            display: 'grid',
+            paddingLeft: isDrawerOpen ? 23 : 10,
+            paddingRight: 4
+        }}>
             <Grid container gap={2}>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <Paper sx={dataCardStyle}> xs=4 </Paper>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <Paper sx={dataCardStyle}> xs=4 </Paper>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={3}>
                     <Paper sx={dataCardStyle}> xs=4 </Paper>
                 </Grid>
             </Grid>

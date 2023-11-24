@@ -6,7 +6,7 @@ interface ModeToggleProps {
     children: React.ReactElement;
 }
 
-export const ModeToggle = ({children}: ModeToggleProps): React.ReactNode => {
+export const ModeToggleContext = ({children}: ModeToggleProps): React.ReactNode => {
     const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
     const colorMode = React.useMemo(
         () => ({
