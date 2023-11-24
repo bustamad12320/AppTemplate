@@ -34,7 +34,7 @@ const companyInfoContainerStyle = {
 }
 
 const appBarStyle = {
-    position: 'relative',
+    position: 'fixed',
     zIndex: 1400
 }
 
