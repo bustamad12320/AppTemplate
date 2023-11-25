@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { createRoot } from 'react-dom/client';
-import {RunDashboard} from "./components/RunDashboard";
+import {Dashboard} from "./components/Dashboard";
 import {Box} from "@mui/system";
 import {CssBaseline} from "@mui/material";
 import {AppHeader} from "./components/AppHeader";
@@ -19,7 +19,7 @@ export const App = () => {
                     <CssBaseline/>
                     <Router>
                         <Routes>
-                            <Route path={"/dashboard"} element={<RunDashboard/>}/>
+                            <Route path={"/dashboard"} element={<Dashboard/>}/>
                             <Route path={"*"} element={<div> Default Page </div>}/>
                         </Routes>
                     </Router>
@@ -29,6 +29,6 @@ export const App = () => {
     );
 }
 
-const entryPoint = document.getElementById('marathon-planner');
+const entryPoint = document.getElementById('app-template');
 const root = createRoot(entryPoint);
 root.render(<App/>);
