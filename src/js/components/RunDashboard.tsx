@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Paper} from "@mui/material";
-import {Box, createTheme} from "@mui/system";
+import {Box} from "@mui/system";
 import { MenuDrawerContext } from '../DrawerContext';
 
 const dataCardStyle = {

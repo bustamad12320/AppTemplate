@@ -15,7 +15,7 @@ export const DrawerContext = (props: DrawerContextProps) => {
 
     const drawerValue = {
         isDrawerOpen,
-        toggleIsDrawerOpen,
+        toggleIsDrawerOpen
     };
 
     return (

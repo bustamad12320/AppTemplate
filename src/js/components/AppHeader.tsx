@@ -9,11 +9,11 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import {Grid, Paper, useTheme} from "@mui/material";
+import {Grid, useTheme} from "@mui/material";
 import {Brightness4, Brightness7} from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { DrawerMenu } from './DrawerMenu';
-import { DrawerContext, MenuDrawerContext } from '../DrawerContext';
+import { MenuDrawerContext } from '../DrawerContext';
 import { ColorModeContext } from '../App';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
