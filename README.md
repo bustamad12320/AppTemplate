@@ -1,4 +1,4 @@
-# Generic App Skeleton
+# Generic App Template
 This repo contains some starter code that I wrote that can be used as a template for new projects. The idea is all the code in here is generic and reusable. Currently there are 3 main components to highlight:
 
 1. A customizable header with an avatar icon and a settings menu drawer on click
