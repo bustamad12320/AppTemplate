@@ -14,3 +14,5 @@ This repo contains some starter code that I wrote that can be used as a template
    a. Fix styling issues
    b. Rework unconventional solutions
    c. Remove dead code
+3. Mobile and Desktop support in all broswers
+   a. Currently everything works as expected in chrome desktop and mobile as well as firefow, however it seems like some of the styles are not being applied in Safari
