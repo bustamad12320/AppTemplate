@@ -10,5 +10,7 @@ This repo contains some starter code that I wrote that can be used as a template
    a. Use of rbac roles
    b. User creation workflow
    c. Login workflow
-2. Code clean up is another high priority item. All current components work properly but since this was made in a rush there is some styling issues as well as unconventional solutions 
-   that could use some improvement.
+2. Code clean up is another high priority item:
+   a. Fix styling issues
+   b. Rework unconventional solutions
+   c. Remove dead code
